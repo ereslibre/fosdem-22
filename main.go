@@ -56,7 +56,7 @@ func fosdem22Demo() *demo.Run {
 	))
 
 	r.Step(demo.S(
-		"Allowed resource request",
+		"Request that should be allowed",
 	), demo.S(
 		"jq -r .object.spec.type service-lb/service_clusterip.json",
 	))
@@ -68,7 +68,7 @@ func fosdem22Demo() *demo.Run {
 	))
 
 	r.Step(demo.S(
-		"Rejected resource request",
+		"Request that should be rejected",
 	), demo.S(
 		"jq -r .object.spec.type service-lb/service_loadbalancer.json",
 	))

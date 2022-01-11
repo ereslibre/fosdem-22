@@ -79,5 +79,11 @@ func fosdem22Demo() *demo.Run {
 		"kwctl run --request-path service-lb/service_loadbalancer.json registry://ghcr.io/kubewarden/policies/disallow-service-loadbalancer:v0.1.2 | jq",
 	))
 
+	r.Step(demo.S(
+		"kwctl supported commands",
+	), demo.S(
+		"kwctl --help",
+	))
+
 	return r
 }
